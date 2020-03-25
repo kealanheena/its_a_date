@@ -1,11 +1,10 @@
 import React from 'react';
 const Form = ({
-  cuisine,
+  cuisine, clickButton
 }) => {
   const cuisineList = cuisine.map((cuisine, key) => (
     <option key={key} value={cuisine}>{cuisine}</option>
   ))
-const clickButton = () => {console.log('submit')}
 
 return (<div className="app-container">
  <select id="person_one"> 
