@@ -1,15 +1,17 @@
 import React from 'react';
-
-const Form = () => (
-  <div className="form-container">
-    <select id="person_one"> 
-      <option value="Chinese"> Chinese</option>
-    </select>
-
-    <select id="person_two"> 
-      <option value="Japanese"> Japanese</option>
-    </select>
-  </div>
-);
-
+const Form = ({
+  cuisine,
+}) => {
+  const cuisineList = cuisine.map((cuisine, key) => (
+    <option key={key} value={cuisine}>{cuisine}</option>
+  ))
+return (<div className="app-container">
+ <select id="person_one"> 
+   {cuisineList}
+ </select>
+ <select id="person_two"> 
+   {cuisineList}
+ </select>
+</div>);
+}
 export default Form;

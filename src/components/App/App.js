@@ -3,7 +3,9 @@ import Form from '../Form/Form';
 
 const App = () => (
   <div className="app-container">
-    <Form/>
+    <Form
+      cuisine={['Chinese', 'Japanese', 'Taiwanese']}
+    />
   </div>
 );
 
