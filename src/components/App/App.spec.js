@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Form from '../Form/Form';
 import App from './App';
 
@@ -16,3 +16,24 @@ describe('App', () => {
     expect(wrapper.containsMatchingElement(<Form/>)).toEqual(true);
   });
 });
+
+// describe('Mounted App', () => {
+//   let wrapper;
+
+//   beforeEach(() => wrapper = mount(<App
+//   cuisine: />));
+
+//   it('should setstateafter clicking', () => {
+//     const spy = jest.spyOn(wrapper.instance(), 'clickButton');
+//     // document.getElementById('person_one').value = "Chinese"
+//     // document.getElementById('person_two').value = "Japanese"
+//     const button = wrapper.find("[data-test='submit_button']")
+//     console.log(button)
+//     // const mockedEvent = { target: { value: 'Comedy' } };
+//     button.find('button').simulate('click');
+//     // button.find('button').simulate('click');
+//     // expect(spy).toHaveBeenCalledTimes(1)
+//     expect(wrapper.state('selectedCuisine')).toEqual(['Chinese', 'Chinese'])
+//   })
+
+// })

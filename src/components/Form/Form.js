@@ -13,7 +13,10 @@ return (<div className="app-container">
  <select id="person_two"> 
    {cuisineList}
  </select>
- <button onClick={clickButton}>Submit!</button>
+ <button 
+ data-test='submit_button' 
+ onClick={() => clickButton()
+ }>Submit!</button>
 </div>);
 }
 export default Form;
