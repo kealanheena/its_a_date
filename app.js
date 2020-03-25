@@ -2,14 +2,17 @@ const express = require('express');
 const app = express()
 const bodyParser = require('body-parser');
 
-const PORT = 3000;
+const PORT = 5000;
 
 app.use(bodyParser.json());
-app.set('view engine', "html");
+app.use(bodyParser.urlencoded({extended: true}));
+app.set('view engine', "ejs");
 
 app.get('/', (req, res) => {
-  req.render('blah');
-})
+  res.render('landing');
+});
+
+// app.use("/views/landing", landing)
 
 app.listen(PORT, () =>{
   console.log(`Server is listening on port ${PORT}`)
