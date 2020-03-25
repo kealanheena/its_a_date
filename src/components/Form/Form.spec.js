@@ -10,4 +10,8 @@ describe('Form', () => {
   it('should render a <div />', () => {
     expect(wrapper.find('div').length).toEqual(1);
   });
+
+  it('shoudl render 2 select tags', () => {
+    expect(wrapper.find('select').length).toEqual(2)
+  })
 });
