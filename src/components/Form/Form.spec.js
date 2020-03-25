@@ -15,4 +15,7 @@ describe('Form', () => {
   it('should render 6 option tags', () => {
     expect(wrapper.find('option').length).toEqual(6)
   })
+  it('should render submit button', () => {
+    expect(wrapper.find('button').length).toEqual(1)
+  })
 });
