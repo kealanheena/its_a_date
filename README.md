@@ -1,5 +1,8 @@
 # It's A Date
 
+## Layout
+
+<img src="./img/its_a_plan.png"/>
 
 ## User Stories
 
