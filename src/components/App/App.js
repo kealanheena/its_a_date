@@ -6,28 +6,26 @@ class App extends Component {
     super(props);
     this.state = {
       cuisine: ['Chinese', 'Japanese', 'Taiwanese'],
-      selectedCuisine: []
+      selectedCuisine: [],
     }
-    this.clickButton = this.clickButton.bind(this)
+    this.setCuisines = this.setCuisines.bind(this)
   }
 
-  clickButton = async() => {
-    // console.log(this.state.cuisine)
+  setCuisines = async() => {
     await this.setState({
       selectedCuisine: [document.getElementById('person_one').value, document.getElementById('person_two').value]
     })
-    console.log(this.state.selectedCuisine)
   };
 
 
   render() {
   return(
-  <div className="app-container">
-    <Form
-      cuisine={this.state.cuisine}
-      clickButton = {this.clickButton}
-    />
-  </div>
+    <div className="app-container">
+      <Form
+        cuisine={this.state.cuisine}
+        setCuisines = {this.setCuisines}
+      />
+    </div>
   )}
 }
 

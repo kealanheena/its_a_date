@@ -20,19 +20,29 @@ describe('App', () => {
 // describe('Mounted App', () => {
 //   let wrapper;
 
-//   beforeEach(() => wrapper = mount(<App
-//   cuisine: />));
+//   beforeEach(() => wrapper = mount(
+//   <App
+//     cuisine={['chinese']}
+//     selectedCuisine={[]}
+//   />
+//   ));
 
 //   it('should setstateafter clicking', () => {
-//     const spy = jest.spyOn(wrapper.instance(), 'clickButton');
+//     console.log('+=======+');
+//     console.log(wrapper.find(".submit-button"));
+//     console.log(wrapper.state('selectedCuisine'));
+//     console.log(document.getElementById('person_one').value);
+//     console.log('+=======+');
+    
+//     // const spy = jest.spyOn(wrapper.instance(), 'setCusines');
+//     wrapper.instance().setCuisines()
 //     // document.getElementById('person_one').value = "Chinese"
 //     // document.getElementById('person_two').value = "Japanese"
-//     const button = wrapper.find("[data-test='submit_button']")
-//     console.log(button)
+//     // console.log(document.getElementById('person_one').value);
 //     // const mockedEvent = { target: { value: 'Comedy' } };
-//     button.find('button').simulate('click');
+//     wrapper.find(".submit-button").first().simulate('click');
 //     // button.find('button').simulate('click');
-//     // expect(spy).toHaveBeenCalledTimes(1)
+//     // expect(spy).toHaveBeenCalledTimes(1) 
 //     expect(wrapper.state('selectedCuisine')).toEqual(['Chinese', 'Chinese'])
 //   })
 

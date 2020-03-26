@@ -1,22 +1,31 @@
 import React from 'react';
+
 const Form = ({
-  cuisine, clickButton
+  cuisine,
+  setCuisines,
 }) => {
   const cuisineList = cuisine.map((cuisine, key) => (
-    <option key={key} value={cuisine}>{cuisine}</option>
+    <option key={key} value={cuisine}>
+      {cuisine}
+    </option>
   ))
 
-return (<div className="app-container">
- <select id="person_one"> 
-   {cuisineList}
- </select>
- <select id="person_two"> 
-   {cuisineList}
- </select>
- <button 
- data-test='submit_button' 
- onClick={() => clickButton()
- }>Submit!</button>
-</div>);
+  return (
+    <div className="app-container">
+      <select id="person_one"> 
+        {cuisineList}
+      </select>
+      <select id="person_two"> 
+        {cuisineList}
+      </select>
+      <button 
+        onClick={() => setCuisines()}
+        className="submit-button"
+      >
+        Submit!
+      </button>
+    </div>
+  );
 }
+
 export default Form;
