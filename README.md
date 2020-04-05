@@ -1,5 +1,7 @@
 # It's A Date
 
+This is an app that will take your favorite cusines and another persons favorite cusines and plan a date based on what you both have in common. d
+
 ## Layout
 
 <img src="./img/its_a_plan.png"/>
@@ -87,10 +89,16 @@ $ npm test
   - should render 2 select tags
   - should render 6 option tags
   - should render submit button
+  - should call setCuisines function when clicked on submit button
 
 - App:
-  - should render a div
-  - should render the Form Component
+  - Shallow App:
+    - should render a div
+    - should render the Form Component
+  - Mounted App:
+    - should have default state as Chinese for person one and two
+    - should change the state when options is change
+    - should change the state when options is change
 
 #### Unit Tests
 

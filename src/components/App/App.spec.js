@@ -26,7 +26,7 @@ describe('Mounted App', () => {
   it('should have default state as Chinese for person one and two', () => {
     expect(wrapper.state('personOneChoice')).toEqual('Chinese')
     expect(wrapper.state('personTwoChoice')).toEqual('Chinese')
-  })
+  });
 
   it('should change the state when options is change', () => {
     wrapper.find('#person_one').simulate('change', { target: { value: 'Japanese' } })
@@ -38,35 +38,4 @@ describe('Mounted App', () => {
     expect(wrapper.state('personTwoChoice')).toEqual('Taiwanese')
   });
 
-})
-
-// describe('Mounted App', () => {
-//   let wrapper;
-
-//   beforeEach(() => wrapper = mount(
-//   <App
-//     cuisine={['chinese']}
-//     selectedCuisine={[]}
-//   />
-//   ));
-
-//   it('should setstateafter clicking', () => {
-//     console.log('+=======+');
-//     console.log(wrapper.find(".submit-button"));
-//     console.log(wrapper.state('selectedCuisine'));
-//     console.log(document.getElementById('person_one').value);
-//     console.log('+=======+');
-    
-//     // const spy = jest.spyOn(wrapper.instance(), 'setCusines');
-//     wrapper.instance().setCuisines()
-//     // document.getElementById('person_one').value = "Chinese"
-//     // document.getElementById('person_two').value = "Japanese"
-//     // console.log(document.getElementById('person_one').value);
-//     // const mockedEvent = { target: { value: 'Comedy' } };
-//     wrapper.find(".submit-button").first().simulate('click');
-//     // button.find('button').simulate('click');
-//     // expect(spy).toHaveBeenCalledTimes(1) 
-//     expect(wrapper.state('selectedCuisine')).toEqual(['Chinese', 'Chinese'])
-//   })
-
-// })
+});
