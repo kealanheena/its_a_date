@@ -27,6 +27,10 @@ describe('Mounted App', () => {
     wrapper.find('#person_one').simulate('change', { target: { value: 'Japanese' } })
     expect(wrapper.state('personOneChoice')).toEqual('Japanese')
   });
+  it('should change the state when options is change', () => {
+    wrapper.find('#person_two').simulate('change', { target: { value: 'Taiwanese' } })
+    expect(wrapper.state('personTwoChoice')).toEqual('Taiwanese')
+  });
 })
 
 // describe('Mounted App', () => {

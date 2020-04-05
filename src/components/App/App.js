@@ -17,14 +17,12 @@ class App extends Component {
     this.setState ({
       personOneChoice: e.target.value
     })
-    console.log(this.state)
   }
 
   selectedCuisineTwo = (e) => {
     this.setState ({
       personTwoChoice: e.target.value
     })
-    console.log(this.state)
   }
 
   setCuisines = async() => {
