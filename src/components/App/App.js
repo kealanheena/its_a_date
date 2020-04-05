@@ -12,13 +12,15 @@ class App extends Component {
   }
 
   setCuisines = async() => {
-    await this.setState({
+    await this.setState ({
       selectedCuisine: [document.getElementById('person_one').value, document.getElementById('person_two').value]
-    })
+      })
+      console.log(this.state)
   };
 
 
   render() {
+    
   return(
     <div className="app-container">
       <Form
@@ -26,6 +28,7 @@ class App extends Component {
         setCuisines = {this.setCuisines}
       />
     </div>
+    
   )}
 }
 
