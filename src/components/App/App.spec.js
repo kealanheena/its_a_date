@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 import Form from '../Form/Form';
 import App from './App';
 
-describe('App', () => {
+describe('Shallow App', () => {
   let wrapper;
 
   beforeEach(() => wrapper = shallow(<App/>));
@@ -15,7 +15,19 @@ describe('App', () => {
   it('should render the Form Component', () => {
     expect(wrapper.containsMatchingElement(<Form/>)).toEqual(true);
   });
+
 });
+
+describe('Mounted App', () => {
+  let wrapper;
+
+  beforeEach(() => wrapper = mount(<App/>));
+
+  it('should change the state when options is change', () => {
+    wrapper.find('#person_one').simulate('change', { target: { value: 'Japanese' } })
+    expect(wrapper.state('personOneChoice')).toEqual('Japanese')
+  });
+})
 
 // describe('Mounted App', () => {
 //   let wrapper;

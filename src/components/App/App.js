@@ -7,8 +7,24 @@ class App extends Component {
     this.state = {
       cuisine: ['Chinese', 'Japanese', 'Taiwanese'],
       selectedCuisine: [],
+      personOneChoice: "Chinese",
+      personTwoChoice: "Chinese"
     }
     this.setCuisines = this.setCuisines.bind(this)
+  }
+
+  selectedCuisineOne = (e) => {
+    this.setState ({
+      personOneChoice: e.target.value
+    })
+    console.log(this.state)
+  }
+
+  selectedCuisineTwo = (e) => {
+    this.setState ({
+      personTwoChoice: e.target.value
+    })
+    console.log(this.state)
   }
 
   setCuisines = async() => {
@@ -26,6 +42,8 @@ class App extends Component {
       <Form
         cuisine={this.state.cuisine}
         setCuisines = {this.setCuisines}
+        selectedCuisineOne={this.selectedCuisineOne}
+        selectedCuisineTwo={this.selectedCuisineTwo}
       />
     </div>
     

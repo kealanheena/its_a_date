@@ -11,10 +11,10 @@ function Form(props) {
   
     return (
       <div className="app-container">
-        <select id="person_one"> 
+        <select id="person_one" onChange={props.selectedCuisineOne}> 
           {cuisineList}
         </select>
-        <select id="person_two"> 
+        <select id="person_two" onChange={props.selectedCuisineTwo} > 
           {cuisineList}
         </select>
         <button 
